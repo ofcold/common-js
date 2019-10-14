@@ -1,1 +1,1 @@
-export Minimum from './minimum';
+export * from './minimum';

@@ -1,5 +1,5 @@
 export class Minimum {
-	make(originalPromise: any, delay: number): Promise {
+	make(originalPromise: any, delay: number): any {
 		return Promise.all([
 			originalPromise,
 			new Promise(resolve => {
