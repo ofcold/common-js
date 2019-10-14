@@ -1,11 +1,11 @@
 export class DefaultSerializer {
-	isObject(data: any): data is object {
-		return typeof data === 'ojbect'
+	isObject(x: any): boolean {
+		return x instanceof Object || x instanceof Array;
 	}
 
 	serialize(data: any): string {
 		if (this.isObject(data)) {
-			return JSON.stringify(item);
+			return JSON.stringify(data);
 		}
 
 		return data;
