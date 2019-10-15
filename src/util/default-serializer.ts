@@ -1,10 +1,10 @@
 export class DefaultSerializer {
-	isObject(x: any): boolean {
+	static isSupportSerializer(x: any): boolean {
 		return x instanceof Object || x instanceof Array;
 	}
 
-	serialize(data: any): string {
-		if (this.isObject(data)) {
+	static serialize(data: any): string {
+		if (this.isSupportSerializer(data)) {
 			return JSON.stringify(data);
 		}
 
@@ -18,7 +18,7 @@ export class DefaultSerializer {
 	 *
 	 * @return {object}
 	 */
-	unserialize(data?: string): any {
+	static unserialize(data?: string): any {
 		if(! data) {
 			return data;
 		}
